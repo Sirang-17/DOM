@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background: gray;
+        }
+
+        .active {
+            background: green;
+        }
+    </style>
+
+    <div class="box" id="box"></div>
+    <button id="btn">Add Class</button>
+
+    <script>
+        let box = document.getElementById("box");
+        let btn = document.getElementById("btn");
+
+        btn.addEventListener("click", function () {
+            // box.classList.add("active"); // adds "active" class
+            // box.classList.remove("active"); // removes class, If class doesn’t exist, nothing happens (no error!)
+
+            box.classList.toggle("active"); //If active exists → removes it,
+                                               // If active doesn’t exist → adds it
+                                               // Perfect for click buttons, dark mode, menus
+
+            // if (box.classList.contains("active")) {
+            //     console.log("Box is active!");
+            // } else {
+            //     console.log("Box is inactive!");
+            // }
+
+            // box.classList.replace("oldClass", "newClass"); //Changes a class without affecting others
+
+// 💡 Real-World Use Cases
+
+// Dark Mode Toggle // document.body.classList.toggle("dark-mode");
+
+
+// Navbar Active Link
+// links.forEach(link => link.classList.remove("active"));
+// clickedLink.classList.add("active");
+
+
+// Show / Hide Elements
+// menu.classList.toggle("visible");
+
+// ✅ Key Takeaways
+// classList is cleaner than element.className
+// toggle() is extremely useful for interactive UI
+// Always check contains() if you want conditions
+
+        });
+    </script>
+
+</body>
+
+</html>

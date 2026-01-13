@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Validation</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            padding-top: 50px;
+            text-align: center;
+        }
+
+        form {
+            width: 300px;
+            margin: auto;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px;
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .error {
+            color: red;
+            font-size: 14px;
+        }
+
+        .success {
+            color: green;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <form id="myForm">
+        <input type="text" id="username" placeholder="Enter username">
+        <p id="msg"></p>
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+        let form = document.getElementById("myForm");
+        let username = document.getElementById("username");
+        let msg = document.getElementById("msg");
+
+        form.addEventListener("submit", function (event) {
+            event.preventDefault(); // stop form submission
+
+            if (username.value === "") {
+                msg.innerHTML = "Username is required!";
+                msg.className = "error";
+            } else {
+                msg.innerHTML = "Form submitted successfully!";
+                msg.className = "success";
+            }
+        });
+    </script>
+
+</body>
+</html>

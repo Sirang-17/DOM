@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: aquamarine;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2, h3 {
+            color: #333;
+        }
+        .first-links {
+            display: flex;
+            justify-content:space-evenly;
+            align-items: center;
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        li a {
+            text-decoration: none;
+            color: #0077cc;
+        }
+        li a:hover {
+            text-decoration: underline;
+        }
+        .small-paragraphs li {
+            margin-bottom: 10px;
+        }
+        .sidebar{
+            display: flex;
+            justify-content:space-evenly;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Main Heading 1</h1>
+    <h1>Main Heading 2</h1>
+    <ul class="first-links">
+        <li><a href="https://example.com/link1" target="_blank">Link 1</a></li>
+        <li><a href="https://example.com/link2" target="_blank">Link 2</a></li>
+        <li><a href="https://example.com/link3" target="_blank">Link 3</a></li>
+    </ul>
+    
+    <!-- Subheading with Paragraph -->
+    <h2>Subheading Example</h2>
+    <p>
+        This is a paragraph under the subheading. You can write some description here 
+        about the topic or explain the purpose of the links above.
+    </p>
+
+    <!-- List of Small Paragraphs -->
+    <h3>Additional Information</h3>
+    <ul class="small-paragraphs">
+        <li>Small paragraph 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+        <li>Small paragraph 2: Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+        <li>Small paragraph 3: Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.</li>
+    </ul>
+
+    <div id="sidebar">
+        <ul class="first-links">
+        <li><a href="https://example.com/link1" target="_blank">Link 1</a></li>
+        <li><a href="https://example.com/link2" target="_blank">Link 2</a></li>
+        <li><a href="https://example.com/link3" target="_blank">Link 3</a></li>
+    </ul>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>

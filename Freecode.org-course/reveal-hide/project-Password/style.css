@@ -1,0 +1,71 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: #1c2a33;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.password-section {
+  width: 100%;
+  max-width: 400px;
+  margin: 20px auto;
+  font-family: 'Poppins', sans-serif;
+}
+
+.password-section label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #ffcb6b;
+  font-size: 14px;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding: 12px 45px 12px 15px; /* space for icon */
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.password-wrapper input:focus {
+  border-color: #ffcb6b;
+  box-shadow: 0 0 8px #ffcb6b;
+}
+
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toggle-password svg {
+  width: 24px;
+  height: 24px;
+  transition: all 0.2s ease;
+}
+
+.toggle-password:hover svg {
+  transform: scale(1.2);
+  stroke: #ffda85;
+}

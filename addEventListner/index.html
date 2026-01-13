@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>addEventListener Example</title>
+
+    <!-- CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background: #f4f6f8;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        button {
+            padding: 12px 25px;
+            font-size: 16px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            background: #2563eb;
+            color: white;
+        }
+
+        /* Class added by JavaScript */
+        .active {
+            color: green;
+            font-size: 28px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HTML -->
+    <h2 id="title">Click the button</h2>
+    <button id="btn">Click Me</button>
+
+    <!-- JavaScript -->
+    <script>
+        let title = document.getElementById("title");
+        let button = document.getElementById("btn");
+
+        button.addEventListener("click", function () {
+            title.innerText = "Button Clicked!";
+            title.classList.toggle("active");
+        });
+    </script>
+
+</body>
+</html>

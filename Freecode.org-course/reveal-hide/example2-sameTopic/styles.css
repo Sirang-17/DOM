@@ -1,0 +1,77 @@
+* {
+  box-sizing: border-box;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  margin: 0;
+  background: linear-gradient(180deg, #1c2a33, #2b3e4b);
+  min-height: 100vh;
+  color: #fff;
+  padding: 30px;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
+}
+
+.wrapper {
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Content box */
+.content-box {
+  border: 2px solid #cfd8dc;
+  border-radius: 14px;
+  overflow: hidden;
+  max-height: 60px; /* height of button initially */
+  padding: 10px 20px;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+}
+
+/* Button */
+.reveal-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-bottom: 0; /* remove gap that causes white line */
+  border: none;     /* remove inner border */
+}
+
+.toggle-btn {
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  user-select: none;
+}
+
+/* Paragraph content */
+.hidden-content {
+  display: none;
+  line-height: 1.6;
+}
+
+/* Active state */
+.content-box.active {
+  max-height: 500px; /* enough to show paragraph */
+  padding: 20px;
+}
+
+.content-box.active .hidden-content {
+  display: block;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .reveal-box {
+    width: 100%;
+  }
+}
