@@ -1,0 +1,94 @@
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  background: #fff;
+  padding: 25px;
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+.container h2 {
+  margin-bottom: 15px;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+}
+
+button {
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.remember {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  user-select: none;
+}
+
+.remember input {
+  display: none;
+}
+
+/* ✨ Custom Checkbox */
+.custom-box {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #00f7ff;
+  border-radius: 4px;
+  position: relative;
+  transition: 0.3s;
+}
+
+.custom-box::after {
+  content: "";
+  position: absolute;
+  width: 5px;
+  height: 10px;
+  border-right: 2px solid #000;
+  border-bottom: 2px solid #000;
+  transform: rotate(45deg) scale(0);
+  left: 5px;
+  top: 1px;
+  transition: 0.3s;
+}
+
+.remember input:checked + .custom-box {
+  background: #00f7ff;
+  box-shadow: 0 0 10px #00f7ff;
+}
+
+.remember input:checked + .custom-box::after {
+  transform: rotate(45deg) scale(1);
+}
+
+.hidden {
+  display: none;
+}

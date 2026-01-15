@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 💾 Local Storage & Session Storage (JavaScript)
+
+Both are part of the Web Storage API and allow you to store data in the browser as key–value pairs.
+
+1️⃣ Local Storage
+📌 What is it?
+Local Storage stores data permanently (until you manually delete it).
+
+Data stays even after:
+Browser refresh 🔄
+Browser close ❌
+System restart 💻
+
+🔹 Use cases
+Theme (dark/light mode)
+Remember user login
+Game progress
+Language preference
+
+🔹 Syntax
+localStorage.setItem("username", "Sirang");
+localStorage.getItem("username");
+localStorage.removeItem("username");
+localStorage.clear();
+
+🔹 Example
+localStorage.setItem("theme", "dark");
+
+const theme = localStorage.getItem("theme");
+console.log(theme);
+
+2️⃣ Session Storage
+📌 What is it?
+Session Storage stores data temporarily.
+
+Data is deleted when:
+The browser tab is closed ❌
+Data survives:
+Page refresh 🔄
+
+🔹 Use cases
+One-time form data
+OTP verification
+Temporary login state
+Step-by-step forms
+
+🔹 Syntax
+sessionStorage.setItem("token", "123abc");
+sessionStorage.getItem("token");
+sessionStorage.removeItem("token");
+sessionStorage.clear(); -->
+
+<!-- 
+⚠️ Important Rules
+Stores only strings
+
+Objects must be converted:
+localStorage.setItem("user", JSON.stringify({name:"Ali"}));
+JSON.parse(localStorage.getItem("user"));
+
+🧠 Real Example (Login)
+if (rememberMe) {
+  localStorage.setItem("login", "true");
+} else {
+  sessionStorage.setItem("login", "true");
+}
+
+❌ What NOT to store
+Passwords
+Credit card info
+Sensitive data
+
+✅ Quick Summary
+Local Storage → long-term data
+Session Storage → short-term data
+Both store data in browser
+Key–value & string-only -->
+    <script src="scripto.js"></script>
+</body>
+
+</html>
